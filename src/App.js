@@ -38,6 +38,30 @@ form.addEventListener("submit", (event) => {
         }
     }
 
-    alert("El total mas el impuesto es: " + (total+impuesto));
+    var descuento = 0;
+
+
+    if (total >= 30000) {
+        descuento=0.15*total;
+    } else {
+        if (total >= 10000) {
+            descuento=0.1*total;
+        } else {
+            if (total >= 7000) {
+                descuento = 0.07 * total;
+            } else {
+                if (total >= 3000) {
+                    descuento = 0.05 * total;
+                } else {
+                    if (total >= 1000) {
+                        descuento = 0.03 * total;
+                    } 
+                }
+            }
+        }
+    }
+
+    alert("El total mas el impuesto es: " + (total + impuesto));
+    alert("El total mas el impuesto y menos el descuento es:  " + (total + impuesto - descuento));
 
 });
