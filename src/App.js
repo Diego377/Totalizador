@@ -5,6 +5,7 @@ const estado = document.querySelector("#estado-input");
 const direccion = document.querySelector("#direccion-input");
 const telefono = document.querySelector("#telefono-input");
 const ciudad = document.querySelector("#ciudad-input");
+const regalo = document.querySelector("#regalo-input");
 
 
 form.addEventListener("submit", (event) => {
@@ -43,7 +44,7 @@ form.addEventListener("submit", (event) => {
             }
         }
     }
-
+    
     var descuento = 0;
 
 
@@ -66,6 +67,11 @@ form.addEventListener("submit", (event) => {
             }
         }
     }
+
+    if(regalo.value == 'S')
+        alert("El envio es un regalo");
+    else
+        alert("El envio no es un regalo");
 
     alert("El total mas el impuesto es: " + (total + impuesto));
     alert("El total mas el impuesto y menos el descuento es:  " + (total + impuesto - descuento));
