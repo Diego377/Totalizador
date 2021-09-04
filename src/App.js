@@ -11,6 +11,7 @@ const regalo = document.querySelector("#regalo-input");
 form.addEventListener("submit", (event) => {
 
     var total = cantidad.value*precio.value;
+    var envoltorio = 0;
     
     alert("La cantidad indicada: " + cantidad.value);
     alert("El precio indicado: " + precio.value);
@@ -69,11 +70,16 @@ form.addEventListener("submit", (event) => {
     }
 
     if(regalo.value == 'S')
-        alert("El envio es un regalo");
+    {
+        envoltorio=5;
+        alert("El envio es un regalo, se agregara el precio del envoltorio");
+    }
     else
-        alert("El envio no es un regalo");
+    {
+        alert("El envio no es un regalo, no se aumentara el precio del envoltorio ");
+    }
 
     alert("El total mas el impuesto es: " + (total + impuesto));
-    alert("El total mas el impuesto y menos el descuento es:  " + (total + impuesto - descuento));
+    alert("El total mas el impuesto y menos el descuento es:  " + (total + impuesto - descuento + envoltorio));
 
 });
