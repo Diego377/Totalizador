@@ -2,6 +2,9 @@ const cantidad = document.querySelector("#Cantidad-input");
 const form = document.querySelector("#totalizador-form");
 const precio = document.querySelector("#Precio-input");
 const estado = document.querySelector("#estado-input");
+const direccion = document.querySelector("#direccion-input");
+const telefono = document.querySelector("#telefono-input");
+const ciudad = document.querySelector("#ciudad-input");
 
 
 form.addEventListener("submit", (event) => {
@@ -12,6 +15,9 @@ form.addEventListener("submit", (event) => {
     alert("El precio indicado: " + precio.value);
     alert("El total es: " + total);
     alert("El estado indicado: " + estado.value);
+    alert("La direccion indicada: " + direccion.value);
+    alert("El telefono indicado: " + telefono.value);
+    alert("La ciudad indicada: " + ciudad.value);
     
 
     var impuesto = 0;
