@@ -19,7 +19,6 @@ form.addEventListener("submit", (event) => {
     alert("El estado indicado: " + estado.value);
     alert("La direccion indicada: " + direccion.value);
     alert("El telefono indicado: " + telefono.value);
-    alert("La ciudad indicada: " + ciudad.value);
     
 
     var impuesto = 0;
